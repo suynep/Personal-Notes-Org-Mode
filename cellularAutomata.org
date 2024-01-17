@@ -1,0 +1,68 @@
+* Cellular Automata
+
+** The Cell
+The fundamental building block of a Cellular Automata (CA) is the ~Cell~.
+The Cell consists of ~states~, and ~neighbors~.
+- 1D CA has 2 Neighbors -->
+|o| x| o|
+[o = neighbors, x = current cell]
+- 2D CA has 8 Neighbors -->
+
+| o | o | o |
+| o | x | o |
+| o | o | o |
+
+
+But what /make/ Cellular Automata *interesting* are the rules:
+- Rules govern the state /transition/
+
+Now we start coding. Check ~$HOME/src/cellular-automata/~ for more details
+
+
+
+
+
+*** States of 1-D Cellular Automata
+
+We check the most trivial of cases:
+
+[][][] (3 cells)
+
+In case of 3 Cells, we have got 8 possible states (think of it as a 3 bit number as each cell can only be a *1* or a *0*)
+
+So, for 3 cells, the net possible states are:
+
+| 0 0 0 |--> 0
+| 0 0 1 |--> 1
+| 0 1 0 |--> 1
+| 0 1 1 |--> 0
+| 1 0 0 |--> 1
+| 1 0 1 |--> 0
+| 1 1 0 |--> 0
+| 1 1 1 |--> 1
+
+
+You might be wondering what the numbers to the RHS of the Arrow (-->) mean. Those are called /rule-set/. They govern the next state of the 3-celled-block.
+
+That is to say, [0, 0, 0, 1, 0, 1, 0] would transform to, under the aforementioned rule-set, to [0, 0, 1, 1, 0, 1, 0]
+
+viz.
+*[0, 0, 0, 1, 0, 1, 0]* -->
+*[0, 0, 1, 1, 0, 1, 0]*
+
+/*How?*/
+
+See that [0, 0, 0, ...], our first 3-celled-block of the ~Array~ has a corresponding transform of *0* in the /rule-set/. This transforms it to *0*, the second element of the ~result array~. (Not the FIRST! --> We define ~copy~ rule for the edge cells i.e. the value of first and last cell do not change between transforms).
+
+Likewise, for [.., 0, 0, 1, ...], our *second* 3-celled-block of the same ~Array~, the corresponding transform is *1*, therefore 1 is the /*third*/ element of the ~resulting array~.
+
+Applying this measure successively for each 3-celled-block results in the resulting array.
+#+INCLUDE: "~/src/cellular-automata/script.js" src js
+**** On rule-sets
+For the time being, the rule-set is arbitrary, just random; however, we might want to pick specific, computed values, for a precise, nice-to-look-at /CA/.
+
+
+**** Some Modifications
+So the above code works just fine. However, I want to have an implementation where we can visualize each generation as a row of a stack of `generations` iykwim.
+
+#+INCLUDE: "~/src/cellular-automata-stacked/script.js" src js
