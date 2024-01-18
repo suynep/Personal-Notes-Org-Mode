@@ -1,0 +1,21 @@
+* Chapter 1
+
+** The Interpreter we'll be crafting
+We will be making a new programming language called ~Lox~. Lox will be implemented in the Java Programming Language and shall be named as ~jLox~.
+
+* Chapter 2
+** Starting Quote:
+/"You must have a map, no matter how rough, otherwise you'll end up wandering all over the place."/
+** Objectives:
++ Implement a Language
++ Understand parts of a language
+
+** High level overview of the Mountain we shall be climbing
+
+#+CAPTION: Overview of Our Climb
+[[./images/overview.png]]
+
+
+*** Where does our Journey Begin?
+#+CAPTION: User Input Parse
+[[./images/parse.png]]
