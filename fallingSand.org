@@ -1,0 +1,11 @@
+* Falling sand simulation in p5.js
+
+** Implementation Concept
+
+Think of the entire screen as a ~grid~ of cells, each cell being the size one *sand block*.
+
+With this representation of screen, we can apply Cellular Automata Rules (As Described in the /other/ org file). The rules go as follows:
+
++ Two kinds of States Exist (1 --> Solid Sand Block, and 0 --> Empty Space (air)).
++ If an arbitrary cell (i, j) is a *1* *&* the cell below it (i, j+1) [ /we use the conventional direction of p5.js/ ] is a *0*, move the cell at (i, j) down. - Means Transfer the State below -
++ Start Coding!

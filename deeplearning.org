@@ -1,0 +1,20 @@
+* Deep Learning
+
+** What is
+
++ Deep learning exists as a sub-category under AI which deals with training ~Deep Neural Networks~
++ Deep Learning uses *tons* of data to approximate output of a /complex/ function with a variety of parameters
+  + Ex: An input *image* and a *text* output that describes what the image is
+
+** How does Deep Learning differ from Machine Learning
+
+Machine learning uses transformations in the input data to facilitate a /downstream algorithm/ to produce correct results.
+For instance, if we were to train a machine learning model to correctly differentiate between handwritten *1s* and *0s*, we would have to implement a `stroke`-esque feature that approximates the curves in the image and train our model to infer a 1 or a 0 based on distribution of those strokes.
+
+However, if we were to implement a deep learning model for the same, we would train the model to do everything from the ground up. i.e. the helper strokes that existed in the Machine Learning Model wouldn't exist in the Deep Learning Model.
+
+*feature engineering*: the process of adding strokes and other helpers to the input data
+
+
+
+*** The main Question, then, is how the deep learning model does everything on its own.

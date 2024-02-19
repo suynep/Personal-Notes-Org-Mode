@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-01-18 गुरु 14:14 -->
+<!-- 2024-02-01 गुरु 15:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -246,129 +246,65 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8553401">1. Chapter 1</a>
+<li><a href="#orgade4c8b">1. Idea of an idle game to implement</a>
 <ul>
-<li><a href="#org841a143">1.1. The Interpreter we'll be crafting</a></li>
+<li><a href="#orgdea3a31">1.1. Godot is a fun option. Class-based entities, and simple mechanisms</a></li>
+<li><a href="#org4960c84">1.2. Core mechanisms:</a>
+<ul>
+<li><a href="#org459cd70">1.2.1. on haptic feedback: implement a slide mechanism in a blank canvas like thing instead of the classic tapping in idle games. Make the blank canvas movable and the player can upgrade the slide amount/duration/feedback intensity to enhance their playing experience and gain more mana thru less effort.</a></li>
+<li><a href="#orgc93b8fb">1.2.2. On art: (<i>since it's a game, art is of utmost importance, thus, having a clear mindset on what art style to use is essential</i>)</a></li>
 </ul>
 </li>
-<li><a href="#org30f8cc0">2. Chapter 2</a>
-<ul>
-<li><a href="#org4552a45">2.1. Starting Quote:</a></li>
-<li><a href="#org66d4367">2.2. Objectives:</a></li>
-<li><a href="#org492c602">2.3. High level overview of the Mountain we shall be climbing</a>
-<ul>
-<li><a href="#orge4fc4cf">2.3.1. Where does our Journey Begin?</a></li>
-</ul>
-</li>
-<li><a href="#orgc456a92">2.4. Topic: Scanning</a></li>
-<li><a href="#orge5c5ece">2.5. Topic: Parsing</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8553401" class="outline-2">
-<h2 id="org8553401"><span class="section-number-2">1</span> Chapter 1</h2>
+<div id="outline-container-orgade4c8b" class="outline-2">
+<h2 id="orgade4c8b"><span class="section-number-2">1</span> Idea of an idle game to implement</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org841a143" class="outline-3">
-<h3 id="org841a143"><span class="section-number-3">1.1</span> The Interpreter we'll be crafting</h3>
-<div class="outline-text-3" id="text-1-1">
-<p>
-We will be making a new programming language called <code>Lox</code>. Lox will be implemented in the Java Programming Language and shall be named as <code>jLox</code>.
-</p>
-</div>
-</div>
+<div id="outline-container-orgdea3a31" class="outline-3">
+<h3 id="orgdea3a31"><span class="section-number-3">1.1</span> Godot is a fun option. Class-based entities, and simple mechanisms</h3>
 </div>
 
-<div id="outline-container-org30f8cc0" class="outline-2">
-<h2 id="org30f8cc0"><span class="section-number-2">2</span> Chapter 2</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-org4552a45" class="outline-3">
-<h3 id="org4552a45"><span class="section-number-3">2.1</span> Starting Quote:</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-<i>"You must have a map, no matter how rough, otherwise you'll end up wandering all over the place."</i>
-</p>
-</div>
-</div>
-<div id="outline-container-org66d4367" class="outline-3">
-<h3 id="org66d4367"><span class="section-number-3">2.2</span> Objectives:</h3>
-<div class="outline-text-3" id="text-2-2">
+
+<div id="outline-container-org4960c84" class="outline-3">
+<h3 id="org4960c84"><span class="section-number-3">1.2</span> Core mechanisms:</h3>
+<div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
-<li>Implement a Language</li>
-<li>Understand parts of a language</li>
+<li>A chakra like simulator where a player has got a core which they upgrade thru mana:
+<ul class="org-ul">
+<li>On mana: Mana is the fundamental in-game currency. One of them at least. Players can cultivate, through what we can call an 'incubator' chakra eggs (or mana eggs?) which is another, <i>superior</i> currency of the game (gems equiv).</li>
+</ul></li>
 </ul>
 </div>
-</div>
-
-<div id="outline-container-org492c602" class="outline-3">
-<h3 id="org492c602"><span class="section-number-3">2.3</span> High level overview of the Mountain we shall be climbing</h3>
-<div class="outline-text-3" id="text-2-3">
-
-<div class="figure">
-<p><img src="./images/overview.png" alt="overview.png" />
-</p>
-<p><span class="figure-number">Figure 1: </span>Overview of Our Climb</p>
-</div>
-</div>
 
 
-<div id="outline-container-orge4fc4cf" class="outline-4">
-<h4 id="orge4fc4cf"><span class="section-number-4">2.3.1</span> Where does our Journey Begin?</h4>
-<div class="outline-text-4" id="text-2-3-1">
-
-<div class="figure">
-<p><img src="./images/parse.png" alt="parse.png" />
-</p>
-<p><span class="figure-number">Figure 2: </span>User Input Parse</p>
-</div>
-</div>
-</div>
-</div>
 
 
-<div id="outline-container-orgc456a92" class="outline-3">
-<h3 id="orgc456a92"><span class="section-number-3">2.4</span> Topic: Scanning</h3>
-<div class="outline-text-3" id="text-2-4">
-<p>
-Scanning, also called <code>Lexing</code>, or <code>Lexical analysis</code>, is the process of having the <b>scanner</b> (<i>lexer</i>) to take in a linear stream of characters and transpile them into something akin to a word.
-</p>
+<div id="outline-container-org459cd70" class="outline-4">
+<h4 id="org459cd70"><span class="section-number-4">1.2.1</span> on haptic feedback: implement a slide mechanism in a blank canvas like thing instead of the classic tapping in idle games. Make the blank canvas movable and the player can upgrade the slide amount/duration/feedback intensity to enhance their playing experience and gain more mana thru less effort.</h4>
+</div>
+
+<div id="outline-container-orgc93b8fb" class="outline-4">
+<h4 id="orgc93b8fb"><span class="section-number-4">1.2.2</span> On art: (<i>since it's a game, art is of utmost importance, thus, having a clear mindset on what art style to use is essential</i>)</h4>
+<div class="outline-text-4" id="text-1-2-2">
 <ul class="org-ul">
-<li>Each word is called a <i>Token</i>.</li>
+<li>Will be using pixel-art style shit.
+<ul class="org-ul">
+<li>The overview will be foggy pixelated type i.e. not so detailed sprites required</li>
+<li>The item description menu, however, ought to contain a bit descriptive art style.</li>
+</ul></li>
 </ul>
-
-<p>
-Example of Tokenization:
-</p>
-
-<div class="figure">
-<p><img src="./images/token.png" alt="token.png" />
-</p>
-<p><span class="figure-number">Figure 3: </span>User Input Parse</p>
 </div>
-</div>
-</div>
-
-
-<div id="outline-container-orge5c5ece" class="outline-3">
-<h3 id="orge5c5ece"><span class="section-number-3">2.5</span> Topic: Parsing</h3>
-<div class="outline-text-3" id="text-2-5">
-<p>
-Parsing is the step where our syntax gets the <b>grammar</b> &#x2013; the ability to compose larger expressions out of smaller parts.
-</p>
-
-<p>
-A parser takes in the tokens generated from scanning and generates an <b>Abstract Syntax Tree</b> &#x2013; that essentially reflects the nested nature of the language's grammar.
-</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: god</p>
-<p class="date">Created: 2024-01-18 गुरु 14:14</p>
+<p class="date">Created: 2024-02-01 गुरु 15:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

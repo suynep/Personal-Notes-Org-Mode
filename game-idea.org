@@ -1,0 +1,26 @@
+* Idea of an idle game to implement
+
+
+** Godot is a fun option. Class-based entities, and simple mechanisms
+
+
+** Core mechanisms:
++ A chakra like simulator where a player has got a core which they upgrade thru mana:
+  + On mana: Mana is the fundamental in-game currency. One of them at least. Players can cultivate, through what we can call an 'incubator' chakra eggs (or mana eggs?) which is another, /superior/ currency of the game (gems equiv).
+
+
+
+
+*** on haptic feedback: implement a slide mechanism in a blank canvas like thing instead of the classic tapping in idle games. Make the blank canvas movable and the player can upgrade the slide amount/duration/feedback intensity to enhance their playing experience and gain more mana thru less effort.
+
+
+*** On art: (/since it's a game, art is of utmost importance, thus, having a clear mindset on what art style to use is essential/)
+  + Will be using pixel-art style shit.
+    + The overview will be foggy pixelated type i.e. not so detailed sprites required
+    + The item description menu, however, ought to contain a bit descriptive art style.
+
+
+
+
+** To choose the platform for development
+Choose any thing valid --> anything that helps.

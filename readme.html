@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-01-18 गुरु 14:14 -->
+<!-- 2024-02-03 शनि 23:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -246,129 +246,57 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8553401">1. Chapter 1</a>
+<li><a href="#org1feb1b7">1. Conway's Game of Life</a>
 <ul>
-<li><a href="#org841a143">1.1. The Interpreter we'll be crafting</a></li>
+<li><a href="#orge58ed98">1.1. Rules for Conway's Game of Life</a></li>
+<li><a href="#orga051d3e">1.2. How to Implement</a>
+<ul>
+<li><a href="#orga2845eb">1.2.1. My Approach</a></li>
 </ul>
 </li>
-<li><a href="#org30f8cc0">2. Chapter 2</a>
-<ul>
-<li><a href="#org4552a45">2.1. Starting Quote:</a></li>
-<li><a href="#org66d4367">2.2. Objectives:</a></li>
-<li><a href="#org492c602">2.3. High level overview of the Mountain we shall be climbing</a>
-<ul>
-<li><a href="#orge4fc4cf">2.3.1. Where does our Journey Begin?</a></li>
-</ul>
-</li>
-<li><a href="#orgc456a92">2.4. Topic: Scanning</a></li>
-<li><a href="#orge5c5ece">2.5. Topic: Parsing</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8553401" class="outline-2">
-<h2 id="org8553401"><span class="section-number-2">1</span> Chapter 1</h2>
+<div id="outline-container-org1feb1b7" class="outline-2">
+<h2 id="org1feb1b7"><span class="section-number-2">1</span> Conway's Game of Life</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+Conway's game of life is a 2-D <i>Cellular Automata</i>. Cellular Automaton is a self regulating entity which progresses generationally following a set of rules.
+</p>
 </div>
-<div id="outline-container-org841a143" class="outline-3">
-<h3 id="org841a143"><span class="section-number-3">1.1</span> The Interpreter we'll be crafting</h3>
+
+<div id="outline-container-orge58ed98" class="outline-3">
+<h3 id="orge58ed98"><span class="section-number-3">1.1</span> Rules for Conway's Game of Life</h3>
 <div class="outline-text-3" id="text-1-1">
-<p>
-We will be making a new programming language called <code>Lox</code>. Lox will be implemented in the Java Programming Language and shall be named as <code>jLox</code>.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org30f8cc0" class="outline-2">
-<h2 id="org30f8cc0"><span class="section-number-2">2</span> Chapter 2</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-org4552a45" class="outline-3">
-<h3 id="org4552a45"><span class="section-number-3">2.1</span> Starting Quote:</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-<i>"You must have a map, no matter how rough, otherwise you'll end up wandering all over the place."</i>
-</p>
-</div>
-</div>
-<div id="outline-container-org66d4367" class="outline-3">
-<h3 id="org66d4367"><span class="section-number-3">2.2</span> Objectives:</h3>
-<div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
-<li>Implement a Language</li>
-<li>Understand parts of a language</li>
+<li>Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
+<li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+<li>Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+<li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org492c602" class="outline-3">
-<h3 id="org492c602"><span class="section-number-3">2.3</span> High level overview of the Mountain we shall be climbing</h3>
-<div class="outline-text-3" id="text-2-3">
-
-<div class="figure">
-<p><img src="./images/overview.png" alt="overview.png" />
-</p>
-<p><span class="figure-number">Figure 1: </span>Overview of Our Climb</p>
+<div id="outline-container-orga051d3e" class="outline-3">
+<h3 id="orga051d3e"><span class="section-number-3">1.2</span> How to Implement</h3>
+<div class="outline-text-3" id="text-1-2">
 </div>
-</div>
-
-
-<div id="outline-container-orge4fc4cf" class="outline-4">
-<h4 id="orge4fc4cf"><span class="section-number-4">2.3.1</span> Where does our Journey Begin?</h4>
-<div class="outline-text-4" id="text-2-3-1">
-
-<div class="figure">
-<p><img src="./images/parse.png" alt="parse.png" />
-</p>
-<p><span class="figure-number">Figure 2: </span>User Input Parse</p>
-</div>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-orgc456a92" class="outline-3">
-<h3 id="orgc456a92"><span class="section-number-3">2.4</span> Topic: Scanning</h3>
-<div class="outline-text-3" id="text-2-4">
+<div id="outline-container-orga2845eb" class="outline-4">
+<h4 id="orga2845eb"><span class="section-number-4">1.2.1</span> My Approach</h4>
+<div class="outline-text-4" id="text-1-2-1">
 <p>
-Scanning, also called <code>Lexing</code>, or <code>Lexical analysis</code>, is the process of having the <b>scanner</b> (<i>lexer</i>) to take in a linear stream of characters and transpile them into something akin to a word.
+Create two classes, one for the Global Grid (<code>class Grid</code>) and one for the individual cell(<code>class Cell</code>). [ <i>Note that this could've been done by creating a single <code>Cell</code> class and working from that to create a <code>Grid</code> replica, however I'm too lazy to think tha-at far</i> ].
 </p>
-<ul class="org-ul">
-<li>Each word is called a <i>Token</i>.</li>
-</ul>
-
-<p>
-Example of Tokenization:
-</p>
-
-<div class="figure">
-<p><img src="./images/token.png" alt="token.png" />
-</p>
-<p><span class="figure-number">Figure 3: </span>User Input Parse</p>
 </div>
-</div>
-</div>
-
-
-<div id="outline-container-orge5c5ece" class="outline-3">
-<h3 id="orge5c5ece"><span class="section-number-3">2.5</span> Topic: Parsing</h3>
-<div class="outline-text-3" id="text-2-5">
-<p>
-Parsing is the step where our syntax gets the <b>grammar</b> &#x2013; the ability to compose larger expressions out of smaller parts.
-</p>
-
-<p>
-A parser takes in the tokens generated from scanning and generates an <b>Abstract Syntax Tree</b> &#x2013; that essentially reflects the nested nature of the language's grammar.
-</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: god</p>
-<p class="date">Created: 2024-01-18 गुरु 14:14</p>
+<p class="date">Created: 2024-02-03 शनि 23:14</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

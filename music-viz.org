@@ -1,0 +1,5 @@
+* Interesting Idea: Combination of Flock Simulation (boids) and Music Beats
+
+Whenever a `beat` hits, generative a batch of boids in a circular pattern with a certain radius. The boids follow the pattern of movement as a flock and gradually fade via a `transparency` variable.
+
+First, generate a boid algo, then work on the rest of the problem.

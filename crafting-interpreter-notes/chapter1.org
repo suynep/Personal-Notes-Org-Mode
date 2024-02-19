@@ -19,3 +19,20 @@ We will be making a new programming language called ~Lox~. Lox will be implement
 *** Where does our Journey Begin?
 #+CAPTION: User Input Parse
 [[./images/parse.png]]
+
+
+** Topic: Scanning
+Scanning, also called ~Lexing~, or ~Lexical analysis~, is the process of having the *scanner* (/lexer/) to take in a linear stream of characters and transpile them into something akin to a word.
++ Each word is called a /Token/.
+
+Example of Tokenization:
+#+CAPTION: Tokenization
+[[./images/token.png]]
+
+
+** Topic: Parsing
+Parsing is the step where our syntax gets the *grammar* -- the ability to compose larger expressions out of smaller parts.
+
+A parser takes in the tokens generated from scanning and generates an *Abstract Syntax Tree* -- that essentially reflects the nested nature of the language's grammar.
+#+CAPTION: Abstract Syntax Tree Basic Version
+[[./images/ast.png]]
