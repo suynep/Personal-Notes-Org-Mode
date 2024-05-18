@@ -1,0 +1,24 @@
+* Banker's Algorithm
+
+Algorithm used to safely allocate the available computer resources to processes.
+
+
+Variable's used in the algo:
+
+
++ ~n~: Number of processes in the system
++ ~m~: Number of resource types
++ ~Available~: One dim Array of size /m/ indicating the number of available resources of each type
+  ~Available[j] = k~ means there are ~k~ instances of resource type $R_j$ remaining.
+
++ ~Max~: 2-d array of size ~n x m~ that defines the maximum /demand/ of each process in the system.
+  ~Max[i][j] = k~ means that process $P_i$ may request, at maximum, $k$ instances of resource type $R_j$.
++ ~Allocation~: 2-d array of size ~n x m~ that defines the number of resources allocated to each process at present.
+  ~Allocation[i][j] = k~ means that process $P_i$ is currently allocated $k$ instances of resource type $R_j$
+
++ ~Need~: 2-d array of size ~n x m~ that stores the number of resources remaining to be allocated to each process.
+  ~Need[i][j] = k~ means that process $P_i$ can still be assigned ~k~ resource instances of type $R_j$.
+  ~Need~ represents the number of resources of type $R_j$ that $P_i$ may still request to
+  complete its task.
+
+  Need$[i][j]$ = Max$[i][j]$ $-$ Allocation$[i][j]$
