@@ -3,7 +3,7 @@
 The raw ~org~ format can simply be viewed using any standard text editor.
 To view the compiled ~html~ format, use [[live-server][https://www.npmjs.com/package/live-server]] in the root of this github repo:
 
-```bash
+#+BEGIN_SRC bash
 git clone https://github.com/suynep/Personal-Notes-Org-Mode notes-suy
 cd notes-suy && live-server .
-```
+#+END_SRC
